@@ -19,12 +19,19 @@ A modern job board application featuring a Next.js (`client/`) frontend, Express
 ├── client/ # Next.js app
 
 │ └── src/
+
 │ └── app # App directory or main entrypoints
+
 ├── server/ # Express.js backend & API
+
 │ └── src/
+
 │ └── app.js # Backend entrypoint for server
+
 ├── README.md
+
 ├── package.json
+
 └── ...other root files
 
 ---
