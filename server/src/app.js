@@ -97,6 +97,14 @@ worker.on('drained', async () => {
   failures.length = 0;
 });
 
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, '../client/build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+});
+
 server.listen(process.env.PORT || 5000, () => {
   console.log(`Backend running on port ${process.env.PORT || 5000}`);
 });
